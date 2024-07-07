@@ -17,7 +17,6 @@ class HomeView extends StatelessWidget {
           borderRadius: BorderRadius.circular(16),
         ),
         centerTitle: true,
-        backgroundColor: Colors.lightBlue,
         title: const Text('Weather App'),
         actions: [
           IconButton(
@@ -39,7 +38,9 @@ class HomeView extends StatelessWidget {
           if (state is DefaultWeatherState) {
             return const NoWeatherBody();
           } else if (state is WeatherLoadedState) {
-            return const WeatherInfoBody();
+            return WeatherInfoBody(
+              weather: state.weatherModel,
+            );
           } else {
             return const Center(
               child: Text('oops there is an error'),

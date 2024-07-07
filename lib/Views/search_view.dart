@@ -9,6 +9,9 @@ class SearchView1 extends StatelessWidget {
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
+        shape: RoundedRectangleBorder(
+          borderRadius: BorderRadius.circular(16),
+        ),
         title: const Text('Search a City'),
       ),
       body: Padding(
@@ -27,7 +30,6 @@ class SearchView1 extends StatelessWidget {
               hintText: 'Enter a city',
               suffixIcon: Icon(Icons.search),
               filled: true,
-              fillColor: Colors.white,
               contentPadding: EdgeInsets.all(16.0),
               enabledBorder: OutlineInputBorder(
                 borderRadius: BorderRadius.all(Radius.circular(16.0)),
