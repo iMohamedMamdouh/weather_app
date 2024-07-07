@@ -7,12 +7,12 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 class GetWeatherCubit extends Cubit<WeatherState> {
   GetWeatherCubit() : super(DefaultWeatherState());
 
-  late WeatherModel weatherModel;
+  WeatherModel? weatherModel;
 
   getWeather(city) async {
     try {
       weatherModel = await WeatherService(Dio()).getCurrentWeather(city: city);
-      emit(WeatherLoadedState(weatherModel));
+      emit(WeatherLoadedState(weatherModel!));
     } catch (e) {
       emit(
         WeatherFailureState(

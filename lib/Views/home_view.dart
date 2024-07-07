@@ -17,8 +17,8 @@ class HomeView extends StatelessWidget {
           borderRadius: BorderRadius.circular(16),
         ),
         centerTitle: true,
-        backgroundColor: const Color(0xFF59A4EF),
-        title: const Text('Wether App'),
+        backgroundColor: Colors.lightBlue,
+        title: const Text('Weather App'),
         actions: [
           IconButton(
               onPressed: () {
