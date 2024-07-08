@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-import 'package:flutter/widgets.dart';
 
 class NoWeatherBody extends StatelessWidget {
   const NoWeatherBody({super.key});
@@ -13,17 +12,19 @@ class NoWeatherBody extends StatelessWidget {
           mainAxisSize: MainAxisSize.min,
           children: [
             Text(
-              'there is no weather 😔 start',
+              'Search for a city',
               style: TextStyle(
                 fontSize: 30,
               ),
             ),
             Text(
-              'searching now 🔍',
+              'to see today\'s weather',
               style: TextStyle(
                 fontSize: 30,
               ),
-            )
+            ),
+            SizedBox(height: 16),
+            Icon(Icons.wb_sunny, size: 50, color: Colors.yellow),
           ],
         ),
       ),
